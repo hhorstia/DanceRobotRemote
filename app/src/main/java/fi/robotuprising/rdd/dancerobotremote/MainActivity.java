@@ -246,16 +246,14 @@ public class MainActivity extends Activity {
 		}
 		
 		private void updateStickPosition(float pos, int area) {
-			Log.i("asd", "pos " + pos + " area " + area);
 			View a1 = findViewById(getResources().getIdentifier("nuppi" + area + "1", "id", getPackageName()));
-			a1.setScrollY(-1 * (int) (pos * 470));
+			a1.setScrollY(-1 * (int) (pos * 480));
 			
 			View a2 = findViewById(getResources().getIdentifier("nuppi" + area + "2", "id", getPackageName()));
-			a2.setScrollY(-1 * (int) (pos * 470));
+			a2.setScrollY(-1 * (int) (pos * 500));
 
 			View a3 = findViewById(getResources().getIdentifier("nuppi" + area + "3", "id", getPackageName()));
-			a3.setScrollY(-1 * (int) (pos * 470));
-
+			a3.setScrollY(-1 * (int) (pos * 500));
 		}
 
 	}

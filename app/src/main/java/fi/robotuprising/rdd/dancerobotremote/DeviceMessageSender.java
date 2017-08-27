@@ -227,12 +227,10 @@ public class DeviceMessageSender {
         
         public void run() {
             byte[] buffer = new byte[1024];
-            int bytes;
             
             while (true) {
                 try {
-                    bytes = mmInStream.read(buffer);
-                    //toast(Integer.toString(bytes) + " bytes read from device");
+                    mmInStream.read(buffer);
                 } catch (IOException e) {
                     e.printStackTrace();
                     connectionLost();
@@ -246,7 +244,6 @@ public class DeviceMessageSender {
                 mmOutStream.write(buffer);
             } catch (IOException e) {
                 e.printStackTrace();
-                // XXX?
             }
         }
         
